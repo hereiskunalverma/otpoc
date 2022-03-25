@@ -19,7 +19,7 @@ contract OTMarket is ReentrancyGuard{
     // charge a listing fee so the owner makes a commission
     address payable owner;
 
-    uint256 listingPrice = 0.045 ether;
+    uint256 listingPrice = 0 ether;
     constructor(){
         owner = payable(msg.sender);
     }
@@ -65,7 +65,7 @@ contract OTMarket is ReentrancyGuard{
     public payable nonReentrant{
         // nonReentrant is a modifier that prevents reentry attack
         require(price>0, 'Price must be atleast one ether');
-        require(msg.value == listingPrice, 'Price must match the listing price');
+        // require(msg.value == listingPrice, 'Price must match the listing price');
 
         _tokenIds.increment();
         uint itemId = _tokenIds.current();

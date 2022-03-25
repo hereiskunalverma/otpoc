@@ -23,7 +23,7 @@ export default function Home() {
     // provider, tokenContract, marketContract, data for our marketplace
     const prov="https://ropsten.infura.io/v3/062197f90459457391338d91602a518b"
     const provider = new ethers.providers.JsonRpcProvider(
-      
+      prov
     );
     const tokenContract = new ethers.Contract(nftaddress, NFT.abi, provider);
     const marketContract = new ethers.Contract(
@@ -132,6 +132,10 @@ export default function Home() {
                     disabled={purchasing}
                     onClick={() => buyNFT(nft)}
                   >
+                    {purchasing && <i
+                  className="fa fa-refresh fa-spin"
+                  style={{ marginRight: "5px" }}
+                />}
                     {purchasing ? "Transaction in Progress ..." : "Buy"}
                   </button>
                 </div>

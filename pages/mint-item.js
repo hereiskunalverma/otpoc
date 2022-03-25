@@ -123,7 +123,13 @@ export default function MintItem() {
           {isLoading ? (
             <span>Upload fields</span>
           ) : minting ? (
-            <span>Minting NFT</span>
+            <span>
+              <i
+                className="fa fa-refresh fa-spin"
+                style={{ marginRight: "5px" }}
+              />
+              Minting NFT
+            </span>
           ) : (
             <span>Mint NFT</span>
           )}

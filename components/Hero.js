@@ -40,19 +40,10 @@ const Hero = () => {
                 className={style.accentedButton}
                 disabled={isLoading}
                 onClick={() => {
-                  setLoading(true);
                   router.push("mint-item");
-                  setLoading(false);
                 }}
               >
-                {isLoading ? (
-                  <i
-                    className="fa fa-refresh fa-spin"
-                    style={{ marginRight: "5px" }}
-                  />
-                ) : (
-                  <span>Create</span>
-                )}
+                <span>Create</span>
               </button>
             </div>
           </div>

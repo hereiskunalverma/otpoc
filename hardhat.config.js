@@ -18,6 +18,14 @@ module.exports = {
       accounts: [
         "df57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e",
       ],
+      gas: 2100000,
+      gasPrice: 8000000000,
+    },
+    matic: {
+      url: "https://rpc-mumbai.maticvigil.com",
+      accounts: [
+        "d200a3304b014421078158fc442b2c37a2c3b5cd4ed435ccc7286e53369df90d",
+      ],
     },
     mainnet: {
       url: `https://mainnet.infura.io/v3/${projectId}`,
